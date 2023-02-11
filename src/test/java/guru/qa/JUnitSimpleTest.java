@@ -11,12 +11,12 @@ import static com.codeborne.selenide.Selenide.open;
 public class JUnitSimpleTest {
     @BeforeAll
     static void beforeAll() {
-        open("https://sber.ru/search/?text=&searchid=2337263&web=0");
+        open("https://www.handelsbanken.com/en/");
         Configuration.browserSize = "1920x1080";
     }
 
-    @CsvSource(value = {"Кредит, sberbank.ru/ru/person ",
-            "Вклад, sberbank.com/ru/person/contributions/deposits"})
+    @CsvSource(value = {"Сredit, https://www.handelsbanken.com/en/investor-relations/debt-investors/rating ",
+            "Contribution, https://www.handelsbanken.com/en/sustainability/news/green-bond-impact"})
     @ParameterizedTest(name = "В адресе поиска на сайте банка {1} должна появится нужная категория {0}")
     @Tag("BLOCKER")
     void SearchTest(
