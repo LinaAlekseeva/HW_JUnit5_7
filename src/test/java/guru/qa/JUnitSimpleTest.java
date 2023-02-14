@@ -25,7 +25,7 @@ public class JUnitSimpleTest {
             String Name,
             String productCategory
     ) {
-        $("input").setValue(Name).$(".shb-input-search__search-button").click();
+        $("input").setValue(Name).$(".shb-sepu-search__field").click();
         $(".shb-sepu-app-footer__child").shouldHave(text(productCategory)).clear();
     }
 
