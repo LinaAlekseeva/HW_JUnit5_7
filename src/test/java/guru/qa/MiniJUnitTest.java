@@ -1,9 +1,8 @@
-import guru.qa.DemoTest;
+package guru.qa;
 import org.junit.jupiter.api.Test;
-
 import java.lang.reflect.Method;
 
-public class MiniJUnite {
+public class MiniJUnitTest {
     public static void main(String[] args) throws Exception {
         Method[] methods = DemoTest.class.getDeclaredMethods();
         for (Method method : methods) {
